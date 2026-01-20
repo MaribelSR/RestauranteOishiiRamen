@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurante Oishii Ramen</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="icon" type="image/png" href="imagenes/favicon.png" />
+  </head>
+  <body>
+    <header class="cabecera">
+      <div class="contenedor_principal">
+        <div class="logo">
+          <img
+            src="./imagenes/logo.svg"
+            alt="Logotipo del Restaurante Oishii Ramen"
+          />
+        </div>
+        <nav class="navegacion_pc">
+          <ul>
+            <li><a href="#imagenes">Imágenes</a></li>
+            <li><a href="#audio">Audio</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="pagina/tarea_4.html" target="_blank">Informe</a></li>
+          </ul>
+        </nav>
+        <div class="menu_hamburguesa">
+          <img
+            src="./imagenes/menu_hamburguesa.png"
+            alt="Icono de menu de hamburguesa"
+          />
+        </div>
+      </div>
+    </header>
+    <main class="contenido">
+      <div class="contenedor_principal">
+        <section id="imagenes" class="seccion_multimedia">
+          <h2>Imágenes</h2>
+          <div class="contenedor_imagenes">
+            <figure>
+              <img
+                src="./imagenes/1_Imagen.png"
+                alt="Imagen de elaboración propia"
+              />
+              <figcaption>1_Imagen.png</figcaption>
+            </figure>
+
+            <figure class="centrar">
+              <img src="./imagenes/2_Internet.jpg" alt="Imagen de Internet" />
+              <figcaption>2_Internet.jpg</figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="./imagenes/4_Composicion.jpg"
+                alt="Imagen 4_Composicion"
+              />
+              <figcaption>4_Composicion.jpg</figcaption>
+            </figure>
+
+            <figure>
+              <picture>
+                <!-- Dispositivos menores de 600px -->
+                <source
+                  srcset="./imagenes/6_Composicion_Gimp.jpg"
+                  media="(max-width: 600px)"
+                />
+                <!-- Dispositivos de 600px o más -->
+                <img
+                  src="./imagenes/5_Composicion_Gimp.jpg"
+                  alt="Imagen de composición responsive"
+                />
+              </picture>
+              <figcaption>Responsive</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id="audio" class="seccion_multimedia">
+          <h2>Audio</h2>
+          <!-- Siguiendo la teoría, incluyo mensaje para navegadores antiguos que no sean compatibles con el HTML5. -->
+          <audio controls preload="metadata">
+            <source src="./audios/1_audio.mp3" type="audio/mpeg" />
+            <source src="./audios/2_audio.ogg" type="audio/ogg" />
+            Your browser does not support the audio element.
+          </audio>
+        </section>
+
+        <section id="video" class="seccion_multimedia">
+          <h2>Video</h2>
+          <!-- Al igual que antes, incluyo mensaje para navegadores antiguos que no sean compatibles con el HTML5. -->
+          <video
+            controls
+            width="100%"
+            height="100%"
+            poster="./imagenes/4_Composicion.jpg"
+            preload="metadata"
+          >
+            <source src="./videos/1_video.mp4" type="video/mp4" />
+            <source src="./videos/2_video.ogg" type="video/webm" />
+            Your browser does not support the video element.
+          </video>
+
+          <!-- Incluyo a nivel visual unos botones de control -->
+          <div class="controles_video">
+            <button>Reproducir</button>
+            <button>Pausar</button>
+            <button>Volumen +</button>
+            <button>Volumen -</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="contenedor_footer">
+        <div class="seccion_imagen">
+          <h3>Imágenes</h3>
+          <p>Software: GIMP</p>
+        </div>
+        <div class="seccion_audio">
+          <h3>Audio</h3>
+          <p>Software: Audacity</p>
+        </div>
+        <div class="seccion_video">
+          <h3>Video</h3>
+          <p>Software: Microsoft Clipchamp</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

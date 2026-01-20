@@ -1,0 +1,348 @@
+/*Autora: María Isabel Salvador Rufo*/
+* {
+    box-sizing: border-box;
+    /*Elimino márgenes que hayan por defecto.*/
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Fondo oscuro para cuando la pantalla es mayor de 1200px */
+    background-color: #1f1e1e;
+    color: #272424;
+}
+
+/*Imágenes responsive por defecto.*/
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Es el contendor que hace que se centre el contenido y limita el ancho a 1200px */
+.contenedor_principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/*SECCION DE CABECERA*/
+.cabecera {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    height: 180px;
+    border-bottom: 5px solid #d93025;
+    /*Añado una sutil sombra dorada por simple decoración y estética.*/
+    box-shadow: 0 0 0 1px #cab46c;
+    
+    /*Imagen para el fondo de la cabecera*/
+    background-image: url('../imagenes/fondo_cabecera.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/*Uso de flex para alinear cada parte.*/
+.cabecera .contenedor_principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*Parte de la navegación para ordenador.*/
+.navegacion_pc ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navegacion_pc a {
+    padding: 8px 15px;
+    
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    /*Pongo un pequeño fondo para cada link*/
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+
+.navegacion_pc a:hover {
+    background-color: #d93025;
+}
+
+.logo img {
+    /*Obligo a que sea redondo, aunque el logo lo es, pero para la sombra.*/
+    width: 100px;
+    height: 100px;
+    padding: 0px;
+    border-radius: 80%;
+    box-shadow: 
+        /*Creo una primera linea interior negra*/
+        0 0 0 3px black,
+        /* Creo una segunda linea exterior dorada*/
+        0 0 0 8px rgb(202, 180, 108);
+}
+
+/* Icono de hamburguesa que oculto en para formato escritorio. */
+.menu_hamburguesa {
+    display: none;
+}
+
+/*SECCION DE CONTENIDO.*/
+.contenido {
+    /*Imagen del contenido*/
+    padding: 50px 0;
+    min-height: 80%;
+
+    background-size: cover;
+    background-position: center;
+    /*Añado esto para que la imagen del fondo no se mueva al hacer scroll.*/
+    background-attachment: fixed;
+
+    background-image: url('../imagenes/fondo_contenido.jpg');
+}
+
+/*Para el estilo de cada sección de multimedia.*/
+.seccion_multimedia {
+    margin-bottom: 40px;
+    padding: 30px;
+
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    /*Añado para las secciones un fondo blanco semitransparente para diferenciarlas y por estética.*/
+    background-color: rgba(255, 255, 255, 0.9); 
+}
+
+.seccion_multimedia h2 {
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration:underline #d9312557;
+    color: #d93025;
+}
+
+/*Estilo de las imágenes.*/
+.contenedor_imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contenedor_imagenes figure {
+    padding: 10px;
+    width: 45%;
+    
+    text-align: center;
+    
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(54, 3, 3, 0.901);
+}
+
+/* Ajuste específico para que las imágenes dentro de figure se vean bien.*/
+.contenedor_imagenes img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+/*Como no me gusta como queda una imagen, la especifico para centrarla.*/
+.centrar {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+/*Descripción de cada imagen.*/
+figcaption {
+    margin-top: 10px;
+
+    font-weight: bold;
+
+    color: rgb(78, 74, 74);
+}
+
+/*Parte de audio y video.*/
+#audio, #video {
+    text-align: center;
+}
+
+audio {
+    margin-top: 10px;
+
+    width: 100%;
+    max-width: 600px;
+}
+
+video {
+    width: 100%;
+    max-width: 800px;
+
+    border: 1px solid #520e0e;
+    background-color: #000;
+}
+
+/*Botones del video.*/
+.controles_video {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.controles_video button {
+    padding: 10px 20px;
+    
+    color: white;
+    cursor: pointer;
+
+    border-radius: 6px;
+    border: 1px solid #410505;
+
+    background-color:  #d93025;
+    transition: background 0.3s;
+}
+
+.controles_video button:hover {
+    background-color: rgb(202, 180, 108);
+}
+
+/*SECCION PIE DE PAGINA.*/
+footer {
+    padding: 0;
+    width: 100%;
+
+    border: 5px solid #020000;
+    box-shadow: 
+    /* Creo una linea exterior dorada*/
+    0 0 0 3px rgb(202, 180, 108);
+
+    color: white;
+    /*Hago un degradado para tener dos colores de fondo en el pie de pagina.*/
+    background: linear-gradient(to right, #6f0808 50%, #3b231a 50%);
+}
+
+.contenedor_footer {
+    display: grid;
+    /*Creo 2 columnas del mismo tamaño.*/
+    grid-template-columns: 1fr 1fr; 
+
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+/*Pongo los estilos comunes para los 3.*/
+.seccion_imagen, 
+.seccion_audio, 
+.seccion_video {
+    /* Para centrar el contenido verticalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px;
+
+    text-align: center;
+}
+
+.contenedor_footer h3 {
+    color: #f3c14e; 
+}
+
+/*Pongo la imagen en la primera fila y central.*/
+.seccion_imagen {
+    grid-column: 1 / -1;
+    grid-row: 1; /* Primera fila */
+}
+
+/*Pongo audio en la segunda fila y parte izquierda.*/
+.seccion_audio {
+    grid-column: 1 / 2;
+    grid-row: 2; /* Primera fila */
+}
+
+/*Pongo video en la segunda fila y parte derecha.*/
+.seccion_video {
+    grid-column: 2 / 3; 
+    grid-row: 2;
+}
+
+/*PARTE DISPOSITIVO MOVIL/TABLE.*/
+@media (max-width: 768px) {
+    
+    /*Parte de cabecera del móvil.*/
+    .cabecera .contenedor_principal {
+        flex-direction: column;
+        gap: 15px;
+    }
+    /*Oculto el menú del ordenador.*/
+    .navegacion_pc {
+        display: none; 
+    }
+    /*Se muestra el icono hamburguesa.*/
+    .menu_hamburguesa {
+        display: block;
+        width: 50px;
+        margin: 0 auto;
+    }
+
+    /*Sección contenido.*/
+    .contenedor_imagenes figure {
+        width: 100%;
+    }
+
+    /*Sección footer.*/
+    footer {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+
+        /*Pongo mejor un fondo uniforme sin diferenciar como en el ordenador.*/
+        background: #6f0808; 
+    }
+
+    .contenedor_footer {
+        display:grid;
+        /*Defino dos columna de igual tamaño.*/
+        grid-template-columns: 1fr 1fr;
+        /*Defino dos filas automaticas.*/
+        grid-template-rows: auto auto;
+        gap:0;
+    }
+    
+    .contenedor_footer > div {
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    padding: 10px;
+    }
+    .contenedor_footer > div:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    }
+
+    .contenedor_footer > div:nth-child(2) {
+    grid-column: 2 / 3; 
+    grid-row: 1 / 2;
+    }
+
+    /*Pongo el video abajo y que ocupe todo el ancho.*/
+    .contenedor_footer > div:nth-child(3) {
+    grid-column: 1 / 3; 
+    grid-row: 2 / 3;   
+    }
+
+
+}

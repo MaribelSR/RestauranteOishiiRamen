@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informe de la Tarea 4</title>
+
+    <style>
+      * {
+        margin: 0;
+      }
+
+      #contenido-audios,
+      #contenido-videos {
+        display: none;
+      }
+
+      header {
+        background-color: #f3c14e;
+      }
+
+      header h1 {
+        text-align: center;
+        color: #172e44;
+        padding: 20px 0;
+      }
+
+      nav ul {
+        background-color: #f3c14e;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        background-color: #172e44;
+        border-left: 1px solid #dde0e4;
+        border-radius: 30px 30px 0 0;
+        display: inline;
+        padding: 20px 10px;
+        text-align: center;
+        width: 100%;
+      }
+
+      nav ul li a {
+        color: #dde0e4;
+        font-size: 1.4em;
+        text-decoration: none;
+      }
+
+      nav ul li a:hover {
+        color: #f3c14e !important;
+      }
+
+      nav ul > li:first-child {
+        background-color: #ffffff;
+        border-left: none;
+      }
+
+      nav ul > li:first-child a {
+        color: #172e44;
+      }
+
+      main {
+        margin: 20px;
+      }
+
+      h2 {
+        margin: 20px 0;
+      }
+
+      p,
+      ul,
+      table {
+        font-size: 1.2em;
+      }
+
+      span {
+        font-weight: bolder;
+        color: #172e44;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 5px;
+      }
+
+      table thead tr :first-child {
+        background-color: #ffffff;
+        border: none;
+      }
+
+      table td {
+        text-align: center;
+      }
+
+      table thead tr th {
+        background-color: #01b3a7;
+        padding: 10px;
+      }
+
+      table tbody tr th {
+        background-color: #d1f5b5;
+        padding: 10px;
+        text-align: left;
+      }
+
+      tr:nth-child(2n) {
+        background-color: #dde0e4;
+      }
+    </style>
+
+    <script type="text/javascript">
+      function mostrarOcultarContenido(tipoPestana) {
+        let tipos = ["imagenes", "audios", "videos"];
+
+        tipos.forEach(function (tipo) {
+          if (tipo == tipoPestana) {
+            document.getElementById("enlace-" + tipo).style.color = "#172e44";
+            document.getElementById("pestana-" + tipo).style.backgroundColor =
+              "#FFFFFF";
+            document.getElementById("contenido-" + tipo).style.display =
+              "block";
+          } else {
+            document.getElementById("enlace-" + tipo).style.color = "#dde0e4";
+            document.getElementById("pestana-" + tipo).style.backgroundColor =
+              "#172e44";
+            document.getElementById("contenido-" + tipo).style.display = "none";
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Informe de la tarea 4</h1>
+    </header>
+    <nav>
+      <ul>
+        <li id="pestana-imagenes">
+          <a
+            id="enlace-imagenes"
+            class="enlace"
+            href="#"
+            onclick="mostrarOcultarContenido('imagenes')"
+            >IMÁGENES</a
+          >
+        </li>
+        <li id="pestana-audios">
+          <a
+            id="enlace-audios"
+            class="enlace"
+            href="#"
+            onclick="mostrarOcultarContenido('audios')"
+            >AUDIOS</a
+          >
+        </li>
+        <li id="pestana-videos">
+          <a
+            id="enlace-videos"
+            class="enlace"
+            href="#"
+            onclick="mostrarOcultarContenido('videos')"
+            >VIDEOS</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <!-- ********** IMÁGENES ********** -->
+      <div id="contenido-imagenes">
+        <h2><u>Aportación en el foro</u></h2>
+        <img
+          src="../capturas/captura_APTO_imagen.png"
+          width="1000px"
+          alt="Aportación en el foro"
+          title="Aportación en el foro"
+        />
+
+        <h2><u>Logo</u></h2>
+        <p>
+          <a
+            href="https://www.vectorstock.com/royalty-free-vector/japan-noodle-icon-logo-design-vector-49811199"
+            target="_blank"
+          >
+            https://www.vectorstock.com/royalty-free-vector/japan-noodle-icon-logo-design-vector-49811199
+          </a>
+          <br /><br />Menciona tener una licencia Royalty Free para uso
+          personal. <br />En su "free-license-attribution" indica lo siguiente:
+          Designed by vectorstock (Image #49811199 at VectorStock.com).
+        </p>
+
+        <h2><u>Imagen</u></h2>
+        <p>
+          <span>Licencias creative commons: </span> He elegido la licencia:
+          <img
+            src="../imagenes/by-nc-sa.png"
+            alt="Imagen del logo de la licencia CC BY-NC-SA"
+          />
+          CC BY-NC-SA
+        </p>
+        <p>
+          <span>Justicicación (restricciones): </span> Al ser una imagen creada
+          por mí tras la adaptación de otra, he decidido compartirla bajo esta
+          licencia para permitir su difusión pero sin ser uso comercial, con las
+          restricciones de:
+        </p>
+        <ul>
+          <li>
+            <strong>BY:</strong> Atribuciones. Hace referencia a que requiere de
+            la referencia de la autora en mi caso.
+          </li>
+          <li>
+            <strong>NC:</strong> No comercial. Hace referencia a que no sea
+            utilizada para fines comerciales.
+          </li>
+          <li>
+            <strong>SA:</strong> Compartir igual. Hace referencia a que si se
+            modifica la imagen, la nueva creación debe tener la misma licencia.
+          </li>
+        </ul>
+        <p>
+          Me he basado en esta imagen para crear la mía propia:
+          <a
+            href="https://pixabay.com/es/photos/sushi-pez-rodar-arroz-comida-6127265/"
+            target="_blank"
+            >Enlace a la imagen original</a
+          >
+        </p>
+
+        <h2><u>Internet</u></h2>
+        <p>
+          <a
+            href="https://pixabay.com/es/photos/comida-japonesa-ramen-restaurante-2196172/"
+            target="_blank"
+            >https://pixabay.com/es/photos/comida-japonesa-ramen-restaurante-2196172/</a
+          >
+        </p>
+
+        <h2><u>Composición</u></h2>
+        <img
+          src="../capturas/4_Composicion_captura.png"
+          width="1500px"
+          alt="Captura de pantalla con las propiedades de la imagen"
+          title="Captura composición con Gimp"
+        />
+
+        <h2><u>Composición 1000</u></h2>
+        <p>
+          <span>Medida 1: </span>Reducción de dimensiones: Al haber
+          redimensionado la imagen a 1000px de ancho, se ha reducido el tamaño
+          del archivo por tener menos píxeles. Ahora ocupa 295KB en comparación
+          a la imagen original de 413KB.
+        </p>
+        <p>
+          <span>Medida 2: </span>Compresión con pérdida: He optado por el
+          formato JPEG cumpliendo la finalidad de la optimización de reducir el
+          tamaño de la imagen con la menor pérdida de calidad posible, puesto
+          que este formato de imagen aunque pierda calidad, es una pérdida no
+          perceptible al ojo humano en un tamaño razonable.
+        </p>
+
+        <h2><u>Composición 600</u></h2>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Formato del recurso</th>
+              <th>Dimensiones (Ancho x Alto)</th>
+              <th>Tamaño (KB o MB). Usar la misma unidad de medida</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>logo.svg</th>
+              <td>.svg</td>
+              <td>128 x 128</td>
+              <td>14.2KB</td>
+            </tr>
+            <tr>
+              <th>1_Imagen.png</th>
+              <td>.png</td>
+              <td>827 x 1065</td>
+              <td>623KB</td>
+            </tr>
+            <tr>
+              <th>2_Internet.jpg</th>
+              <td>.jpg</td>
+              <td>1280 x 853</td>
+              <td>252KB</td>
+            </tr>
+            <tr>
+              <th>4_Composicion.jpg</th>
+              <td>.jpg</td>
+              <td>1200 x 1600</td>
+              <td>413KB</td>
+            </tr>
+            <tr>
+              <th>5_Composicion_1000.jpg</th>
+              <td>.jpg</td>
+              <td>1000 x 1333</td>
+              <td>295KB</td>
+            </tr>
+            <tr>
+              <th>6_Composicion_600.jpg</th>
+              <td>.jpg</td>
+              <td>600 x 800</td>
+              <td>139KB</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ********** AUDIOS ********** -->
+      <div id="contenido-audios">
+        <h2><u>Información sobre la canción</u></h2>
+        <p>
+          <span>Tipo de licencia: </span>Licencia Pixabay (Su equivalente en la
+          teoria es CC0 o Dominio Público)
+        </p>
+        <p>
+          La URL de descarga de la canción es:
+          <a
+            href="https://pixabay.com/music/world-traditional-japanese-4-437934/"
+            target="_blank"
+            >https://pixabay.com/music/world-traditional-japanese-4-437934/</a
+          >
+        </p>
+
+        <h2><u>Información sobre 1_audio.mp3 y 2_audio.ogg</u></h2>
+        <p>
+          <span
+            >Justifica las decisiones tomadas en los audios (formatos y
+            optimización de ficheros):
+          </span>
+          <br />Los formatos que he elegido ha sido MP3 y OGG. <br />
+          El <strong>formato MP3</strong> lo he elegido porque es un formato muy
+          utilizado y además es compatible con la mayoría de dispositivos y
+          plataformas. Ofrece una buena calidad de sonido con el tamaño de
+          archivo que tiene (587KB), considerándolo relativamente pequeño.
+          <br /><br />
+          Por otro lado, el <strong>formato OGG</strong> porque es un formato
+          abierto y libre de patentes que ofrece una calidad de sonido similar
+          al MP3. En mi caso lo he ajustado a una calidad media, para que ocupe
+          menos sin sacrificar la calidad.
+        </p>
+
+        <h2><u>Tabla</u></h2>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Formato del recurso</th>
+              <th>Tamaño (KB o MB). Usar la misma unidad de medida</th>
+              <th>Duración (expresado en segundos)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Canción descargada</th>
+              <td>.mp3</td>
+              <td>4976.64KB</td>
+              <td>02:39</td>
+            </tr>
+            <tr>
+              <th>1_audio.mp3</th>
+              <td>.mp3</td>
+              <td>587KB</td>
+              <td>00:29</td>
+            </tr>
+            <tr>
+              <th>2_audio.ogg</th>
+              <td>.ogg</td>
+              <td>468KB</td>
+              <td>00:29</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ********** VIDEOS ********** -->
+      <div id="contenido-videos">
+        <h2><u>Información sobre la composición del video</u></h2>
+        <ul>
+          <li>
+            <span
+              >Nombre de la aplicación utilizada para la edición del video: </span
+            >Microsoft Clipchamp
+          </li>
+          <li>
+            <span>Nombre de las transiciones que has utilizado: </span> He usado
+            transiciones de "Puertas correderas vertical", ¨Barrido suave hacia
+            la derecha" y "Cerrar".
+          </li>
+          <li>
+            <span
+              >Captura de pantalla con la línea de tiempo del proyecto:</span
+            >
+            <br /><br />
+            <img
+              src="../capturas/captura_linea_tiempo.png"
+              width="1200px"
+              alt="Linea del tiempo del proyecto"
+            />
+          </li>
+        </ul>
+
+        <h2><u>Información sobre 1_video.mp4 y 2_video.webm</u></h2>
+        <p>
+          <span
+            >Justifica las decisiones tomadas en los videos (formatos y
+            optimización de ficheros): </span
+          >He elegido los formatos MP4 y WEBM para los videos. <br />
+          El formato <strong>MP4</strong> es de los más extendidos y utilizados
+          en la actualidad. Además, es compatible con la mayoría de dispositivos
+          y plataformas. Ofrece una alta tasa de comprensión con poca pérdida de
+          calidad ya que elimina aquello que el ser humano no es capaz de
+          distinguir. El tamaño de mi archivo es relativamente pequeño en este
+          caso (22.5MB). <br /><br />
+          Por otro lado, el formato <strong>WEBM</strong> es un formato abierto
+          y libre de patentes desarrollado por Google. Está pensando para ser
+          utilizado como formato multimedia estándar en el lenguaje HTML5. En mi
+          caso, es por esta razón por la que he decidido usarlo, además de que
+          el tamaño del archivo es menor(3.41MB sin perder apenas
+          calidad,mejorando la velocidad de carga en navegadores.
+        </p>
+
+        <h2><u>Tabla</u></h2>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Formato del recurso</th>
+              <th>Tamaño (KB o MB). Usar la misma unidad de medida</th>
+              <th>Duración (expresado en segundos)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Video (Presentación)</th>
+              <td>.mp4</td>
+              <td>0.35MB</td>
+              <td>00:07</td>
+            </tr>
+            <tr>
+              <th>Video (Capas)</th>
+              <td>.mkv</td>
+              <td>3.56MB</td>
+              <td>00:30</td>
+            </tr>
+            <tr>
+              <th>Video (Lienzo)</th>
+              <td>.mkv</td>
+              <td>1.18MB</td>
+              <td>00:12</td>
+            </tr>
+            <tr>
+              <th>1_video.mp4</th>
+              <td>.mp4</td>
+              <td>22.5MB</td>
+              <td>00:55</td>
+            </tr>
+            <tr>
+              <th>2_video.webm</th>
+              <td>.webm</td>
+              <td>3.41MB</td>
+              <td>00:55</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
